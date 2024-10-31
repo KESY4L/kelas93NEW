@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KELAS 93</title>
+    <style>
+        /* CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #FFF;
+            background-color: #0d0d0d;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #111;
+            color: #00FFB2;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        h1, h2 {
+            font-size: 2rem;
+            text-shadow: 0 0 8px #00FFB2, 0 0 20px #00FFB2, 0 0 25px #00FFB2;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin: 0.5rem 0;
+        }
+
+        .about, .members, .activities {
+            background-color: #222;
+            padding: 1.5rem;
+            margin: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 255, 178, 0.5);
+            animation: float 4s ease-in-out infinite alternate;
+        }
+
+        ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .activity {
+            width: 120px;
+            height: 120px;
+            background-color: #00FFB2;
+            color: #0d0d0d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 0 15px #00FFB2, 0 0 25px #00FFB2;
+            transition: transform 0.3s ease-in-out;
+            animation: pulse 3s infinite;
+        }
+
+        .activity:hover {
+            transform: scale(1.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #111;
+            color: #00FFB2;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 8px #00FFB2, 0 0 12px #00FFB2, 0 0 15px #00FFB2;
+            }
+            100% {
+                text-shadow: 0 0 16px #00FFB2, 0 0 24px #00FFB2, 0 0 32px #00FFB2;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 10px #00FFB2, 0 0 20px #00FFB2;
+            }
+            50% {
+                box-shadow: 0 0 20px #00FFB2, 0 0 40px #00FFB2;
+            }
+            100% {
+                box-shadow: 0 0 10px #00FFB2, 0 0 20px #00FFB2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Website Kelas Kami!</h1>
+        <p>Kami adalah kumpulan siswa yang penuh semangat dan ceria.</p>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>Tentang Kelas Kami</h2>
+            <p>Kami adalah kelas yang solid dan kompak, selalu belajar dan tumbuh bersama.</p>
+        </section>
+
+        <section class="members">
+            <h2>Daftar Orang Berkuasa</h2>
+            <ul>
+                <li>PURNAMAWATI NINGSIH</li>
+                <li>MORENO NOVERINO</li>
+                <li>ZULKIFLI MALIGANA</li>
+				<li>SITI AISYAH NAFISAH</li>
+                <li>ALISYAH PUTRI AYU</li>
+                <!-- Tambahkan daftar siswa lainnya -->
+            </ul>
+        </section>
+
+        <section class="activities">
+            <h2>Kegiatan Kami</h2>
+            <p>Kami sering mengadakan kegiatan seru dan bermanfaat. Yuk, lihat kegiatan seru kami!</p>
+            <div class="gallery">
+                <div class="activity">Kegiatan 1</div>
+                <div class="activity">Kegiatan 2</div>
+                <div class="activity">Kegiatan 3</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2024 by AL-93</p>
+    </footer>
+
+    <script>
+        // JavaScript
+        document.addEventListener("DOMContentLoaded", () => {
+            const activities = document.querySelectorAll('.activity');
+
+            activities.forEach(activity => {
+                activity.addEventListener('click', () => {
+                    activity.style.backgroundColor = '#FF00FF';
+                    setTimeout(() => {
+                        activity.style.backgroundColor = '#00FFB2';
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
